@@ -5,6 +5,7 @@ body {
     height: fit-content;
     flex-direction: column;
     box-sizing: border-box;
+    
     background-image:linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 254, 254, 0.75)), url("images/bg_shirt.png");
     background-repeat: repeat;
     background-size: 3%;
@@ -87,12 +88,51 @@ body {
 .about-section h2 {
   color: #000000; /* Set the color of the heading text */
   text-align: center;
+  padding: 10px;
 }
 
 .about-section p {
   color: #666; /* Set the color of the paragraph text */
   text-align: justify;
 }
+
+.partners {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: auto;
+  font-size: 20px;
+  background: #ffffff;
+  width: 60%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.partners h2 {
+  color: #000000; 
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+.partners-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  
+}
+
+.partner {
+  flex: 0 0 30%;
+}
+
+.partner img{
+  max-width: 50%;
+  height: auto;
+}
+
+
 
   footer{
     background-color: #333;
