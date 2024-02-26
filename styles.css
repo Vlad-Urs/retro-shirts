@@ -11,6 +11,9 @@ body {
     background-size: 3%;
   }
   
+  html{
+    scroll-behavior: smooth;
+  }
   .container {
     width: 80%;
     margin: auto;
@@ -60,6 +63,15 @@ body {
     border: 1px solid #000000;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-image button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
   /* Place text in the middle of the image */
@@ -176,7 +188,8 @@ form {
   margin: auto;
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
+  border: 1px solid #000000;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -194,7 +207,7 @@ input {
   box-sizing: border-box;
 }
 
-button {
+ form button {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
