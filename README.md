@@ -6,13 +6,13 @@ A landing page for a classic football shirts shop:
 
 Hero image and "about us" section:
 
-![alt text](images/screenshot1.png)
+![alt text](images/screenshot1.PNG)
 
 
 Partners and Gallery:
 
-![alt text](images/screenshot2.png)
+![alt text](images/screenshot2.PNG)
 
 Signup and footer:
 
-![alt text](images/screenshot3.png)
+![alt text](images/screenshot3.PNG)
