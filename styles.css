@@ -48,10 +48,7 @@ body {
     font-family: 'Bree Serif', 'serif';
     }
   
-  .container {
-    margin: 0 auto;
-    max-width: 890px;
-  }
+  
   
   p {
     text-align: center;
@@ -92,14 +89,14 @@ body {
   
   /* Removing padding, margin and "list-style" from the "ul",
    * and adding "position:reltive" */
+  
   nav ul {
     float: right;
     padding:0;
     margin:0;
     list-style: none;
     position: relative;
-    }
-    
+    }  
   /* Positioning the navigation items inline */
   nav ul li {
     margin: 0px;
@@ -127,46 +124,60 @@ body {
   /* Media Queries
   --------------------------------------------- */
   
-  @media all and (max-width : 768px) {
-  
+  @media all and (max-width: 768px) {
     #logo {
       display: block;
       padding: 0;
-      width: 100%;
-      text-align: center;
       float: none;
+      text-align: center;
+      order: 1;
     }
   
     nav {
+      display: flex;
+      justify-content: center;
       margin: 0;
-      text-align: center;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+    }
+  
+    nav ul {
+      float: right;
     }
   
     /* Hide the navigation menu by default */
-    /* Also hide the  */
-    .toggle + a,
+    .toggle + input,
     .menu {
       display: none;
     }
   
-    /* Stylinf the toggle lable */
+    .menu {
+      text-align: center;
+      width: 100%;
+      order: 3;
+    }
+  
+    nav a {
+      left: 0%;
+    }
+  
+    /* Styling the toggle label */
     .toggle {
       display: block;
       background-color: #fd0202;
-      padding:14px 20px;	
-      color:#FFF;
-      font-size:17px;
-      text-decoration:none;
-      border:none;
-      text-align: center;
+      color: #fff;
+      font-size: 17px;
+      padding: 15px;
+      text-decoration: none;
+      border: none;
+      order: 2;
     }
   
     .toggle:hover {
       background-color: #fd0202;
-      text-align: center;
     }
   
-    /* Display Dropdown when clicked on Parent Lable */
+    /* Display Dropdown when clicked on Parent Label */
     [id^=drop]:checked + ul {
       display: block;
       text-align: center;
@@ -177,8 +188,7 @@ body {
       display: block;
       width: 100%;
       text-align: center;
-      }
-  
+    }
   }
   
 
