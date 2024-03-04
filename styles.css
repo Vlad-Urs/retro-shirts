@@ -1,580 +1,580 @@
 body {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    height: fit-content;
-    flex-direction: column;
-    box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  box-sizing: border-box;
 
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #FFF;
+}	
+
+h3 {
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFF;
+}
+
+h3 a {
+  color: #FFF;
+}
+
+a {
+  color: #FFF;
+}
+
+h1 {
+  margin-top: 100px;
+  text-align:center;
+  font-size:60px;
+  line-height: 70px;
+  font-family: 'Bree Serif', 'serif';
   }
-  
-  html{
-    scroll-behavior: smooth;
+
+
+
+p {
+  text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+  margin:0;
+  padding: 0;
+  background-color: #fd0202;
+}
+
+#logo {
+  display: block;
+  padding: 0 20px;
+  float: left;
+  font-size:20px;
+  line-height: 60px;
+
+  font-size: 3vh;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+
+nav ul {
+  float: right;
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  }  
+/* Positioning the navigation items inline */
+nav ul li {
+  margin: 0px;
+  display:inline-block;
+  float: left;
+  background-color: #fd0202;
   }
-  * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-  }
-  h1 {
-    font-size: 60px;
-    text-align: center;
-    color: #FFF;
-  }	
-  
-  h3 {
-    font-size: 30px;
-    line-height: 34px;
-    text-align: center;
-    color: #FFF;
-  }
-  
-  h3 a {
-    color: #FFF;
-  }
-  
-  a {
-    color: #FFF;
-  }
-  
-  h1 {
-    margin-top: 100px;
-    text-align:center;
-    font-size:60px;
-    line-height: 70px;
-    font-family: 'Bree Serif', 'serif';
-    }
-  
-  
-  
-  p {
-    text-align: center;
-  }
-  
-  .toggle,
-  [id^=drop] {
-    display: none;
-  }
-  
-  /* Giving a background-color to the nav container. */
-  nav { 
-    margin:0;
-    padding: 0;
-    background-color: #fd0202;
-  }
-  
+
+/* Styling the links */
+nav a {
+  display:block;
+  padding:14px 20px;	
+  color:#FFF;
+  font-size:17px;
+  text-decoration:none;
+} 
+
+/* Background color change on Hover */
+nav a:hover { 
+  opacity: 0.5;
+}
+
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width: 768px) {
   #logo {
     display: block;
-	  padding: 0 20px;
-	  float: left;
-	  font-size:20px;
-	  line-height: 60px;
+    padding: 0;
+    float: none;
+    text-align: center;
+    order: 1;
+  }
 
-    font-size: 3vh;
-    font-weight: bold;
-    color: #ffffff;
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
   }
-  
-  /* Since we'll have the "ul li" "float:left"
-   * we need to add a clear after the container. */
-  
-  nav:after {
-    content:"";
-    display:table;
-    clear:both;
-  }
-  
-  /* Removing padding, margin and "list-style" from the "ul",
-   * and adding "position:reltive" */
-  
+
   nav ul {
     float: right;
-    padding:0;
-    margin:0;
-    list-style: none;
-    position: relative;
-    }  
-  /* Positioning the navigation items inline */
-  nav ul li {
-    margin: 0px;
-    display:inline-block;
-    float: left;
-    background-color: #fd0202;
-    }
-  
-  /* Styling the links */
-  nav a {
-    display:block;
-    padding:14px 20px;	
-    color:#FFF;
-    font-size:17px;
-    text-decoration:none;
-  } 
-  
-  /* Background color change on Hover */
-  nav a:hover { 
-    opacity: 0.5;
-  }
-  
-  
-  
-  /* Media Queries
-  --------------------------------------------- */
-  
-  @media all and (max-width: 768px) {
-    #logo {
-      display: block;
-      padding: 0;
-      float: none;
-      text-align: center;
-      order: 1;
-    }
-  
-    nav {
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      flex-direction: row-reverse;
-      flex-wrap: wrap;
-    }
-  
-    nav ul {
-      float: right;
-    }
-  
-    /* Hide the navigation menu by default */
-    .toggle + input,
-    .menu {
-      display: none;
-    }
-  
-    .menu {
-      text-align: center;
-      width: 100%;
-      order: 3;
-    }
-  
-    nav a {
-      left: 0%;
-    }
-  
-    /* Styling the toggle label */
-    .toggle {
-      display: block;
-      background-color: #fd0202;
-      color: #fff;
-      font-size: 17px;
-      padding: 15px;
-      text-decoration: none;
-      border: none;
-      order: 2;
-    }
-  
-    .toggle:hover {
-      background-color: #fd0202;
-    }
-  
-    /* Display Dropdown when clicked on Parent Label */
-    [id^=drop]:checked + ul {
-      display: block;
-      text-align: center;
-    }
-  
-    /* Change menu item's width to 100% */
-    nav ul li {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
-
-
-  /* The hero image */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/main_wallpaper.jpg");
-  
-    /* Set a specific height */
-    height: 100vh;
-  
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
   }
 
-  
+  /* Hide the navigation menu by default */
+  .toggle + input,
+  .menu {
+    display: none;
+  }
 
-  /* Place text in the middle of the image */
-  .hero-text h2 {
-    position: absolute;
+  .menu {
     text-align: center;
-    font-size: 5vh;
-    font-weight: bold;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    width: 100%;
+    order: 3;
+  }
+
+  nav a {
+    left: 0%;
+  }
+
+  /* Styling the toggle label */
+  .toggle {
+    display: block;
+    background-color: #fd0202;
+    color: #fff;
+    font-size: 17px;
+    padding: 15px;
+    text-decoration: none;
+    border: none;
+    order: 2;
+  }
+
+  .toggle:hover {
+    background-color: #fd0202;
+  }
+
+  /* Display Dropdown when clicked on Parent Label */
+  [id^=drop]:checked + ul {
+    display: block;
+    text-align: center;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/main_wallpaper.jpg");
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+/* Place text in the middle of the image */
+.hero-text h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 5vh;
+  font-weight: bold;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-image button {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fd0202;
+  color: #fff;
+  padding: 20px 40px; /* Adjust padding for the desired size */
+  text-align: center;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+@media (min-width: 769px) {
+  .hero-text h2{
+    top: 60%;
+    font-size: 10vh;
+    width: 100%;
   }
 
   .hero-image button {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fd0202;
-    color: #fff;
-    padding: 20px 40px; /* Adjust padding for the desired size */
-    text-align: center;
-    display: inline-block;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-
-    font-weight: bold;
+    top: 80%; /* Adjust this value to vertically center the button */
   }
-
-  .hero-text button:hover {
-    background-color: #555;
-    color: white;
-  }
-
-
-  @media (min-width: 769px) {
-    .hero-text h2{
-      top: 60%;
-      font-size: 10vh;
-      width: 100%;
-    }
-
-    .hero-image button {
-      top: 80%; /* Adjust this value to vertically center the button */
-    }
-  }
+}
 
 
 
-  /*about section------------------------------------------------------------------*/
+/*about section------------------------------------------------------------------*/
 
 .about-heading{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px auto;
+width: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+margin: 20px auto;
 }
 
 .about-heading h1{
-  font-size: 50px;
-  color: #000000;
-  margin-bottom: 25px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+color: #000000;
+margin-bottom: 25px;
+position: relative;
+font-family: 'Montserrat', sans-serif;
 
 }
 
 .about-heading h1::after{
-  content:"";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  display: block;
-  margin:0 auto;
-  background-color: #fd0202;
+content:"";
+position: absolute;
+width: 100%;
+height: 4px;
+display: block;
+margin:0 auto;
+background-color: #fd0202;
 }
 
 .about-heading p{
-  font-size: 18px;
-  color: #000000;
-  margin-bottom: 35px;
+font-size: 18px;
+color: #000000;
+margin-bottom: 35px;
 }
 
 .about-container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px 20px;
+width: 90%;
+margin: 0 auto;
+padding: 10px 20px;
 }
 
 .about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
 }
 
 .about-image {
-  flex: 1;
-  margin-right: 40px;
-  overflow: hidden;
+flex: 1;
+margin-right: 40px;
+overflow: hidden;
 }
 
 .about-image img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-  transition: 0.5s ease;
+max-width: 100%;
+height: auto;
+display: block;
+transition: 0.5s ease;
 }
 
 .about-image:hover img{
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
 .about-content {
-  flex:1;
+flex:1;
 }
 
 .about-content h2{
-  font-size: 23px;
-  margin-bottom: 15px;
-  color: #000000;
-  text-align: center;
+font-size: 23px;
+margin-bottom: 15px;
+color: #000000;
+text-align: center;
 }
 
 .about-content p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
-  text-align: justify;
+font-size: 18px;
+line-height: 1.5;
+color: #666;
+text-align: justify;
 }
 
 /*media query for mobile*/
 @media screen and (max-width: 768px) {
-  .heading{
-    padding: 0px 20px;
-  }
+.heading{
+  padding: 0px 20px;
+}
 
-  .heading h1{
-    font-size: 36px;
-  }
+.heading h1{
+  font-size: 36px;
+}
 
-  .heading p{
-    font-size: 17px;
-    margin-bottom: 0px;
-  }
+.heading p{
+  font-size: 17px;
+  margin-bottom: 0px;
+}
 
-  .about-container{
-    padding: 0px;
-  }
+.about-container{
+  padding: 0px;
+}
 
-  .about{
-    padding: 20px;
-    flex-direction: column;
-  }
+.about{
+  padding: 20px;
+  flex-direction: column;
+}
 
-  .about-image{
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
+.about-image{
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
 
-  .about-content {
-    padding: 0px;
-    font-size: 16px;
-  }
+.about-content {
+  padding: 0px;
+  font-size: 16px;
+}
 }
 
 /*catalogue section----------------------------------------------------------------------------*/
 .catalogue-heading{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px auto;
+width: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+margin: 20px auto;
 }
 
 .catalogue-heading h1{
-  font-size: 50px;
-  color: #000000;
-  margin-bottom: 25px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+color: #000000;
+margin-bottom: 25px;
+position: relative;
+font-family: 'Montserrat', sans-serif;
 
 }
 
 .catalogue-heading h1::after{
-  content:"";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  display: block;
-  margin:0 auto;
-  background-color: #fd0202;
+content:"";
+position: absolute;
+width: 100%;
+height: 4px;
+display: block;
+margin:0 auto;
+background-color: #fd0202;
 }
 
 .catalogue-heading p{
-  font-size: 18px;
-  color: #000000;
-  margin-bottom: 15px;
+font-size: 18px;
+color: #000000;
+margin-bottom: 15px;
 }
 
 .catalogue-container{
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-  
-  padding: 0;
-  margin: 0;
-  list-style: none;
+display: flex;
+flex-flow: row;
+justify-content: space-evenly;
+
+padding: 0;
+margin: 0;
+list-style: none;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  overflow: hidden;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+width: 300px;
+margin: auto;
+text-align: center;
+font-family: arial;
+overflow: hidden;
 }
 
 .card img {
-  width: 100;
-  transition: 0.5s ease;
-  overflow: hidden;
-  margin-bottom: 10px;
+width: 100;
+transition: 0.5s ease;
+overflow: hidden;
+margin-bottom: 10px;
 }
 
 .card:hover img{
-  transform: scale(1.1);
+transform: scale(1.1);
 }
 
 .price {
-  color: grey;
-  font-size: 22px;
+color: grey;
+font-size: 22px;
 }
 
 .card h2{
-  font-size: 23px;
+font-size: 23px;
 
-  color: #000000;
-  text-align: center;
+color: #000000;
+text-align: center;
 }
 
 .card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #fd0202;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+border: none;
+outline: 0;
+padding: 12px;
+color: white;
+background-color: #fd0202;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
 }
 
 .card button:hover {
-  opacity: 0.7;
+opacity: 0.7;
 }
 
 @media screen and (max-width: 768px) {
-  .catalogue-container{
-    flex-flow: column;
-  }
+.catalogue-container{
+  flex-flow: column;
+}
 
-  .card{
-    margin-top: 40px;
-  }
+.card{
+  margin-top: 40px;
+}
 }
 
 
 /*partners section----------------------------------------------------------------------------*/
 .partners-heading{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px auto;
+width: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+margin: 20px auto;
 }
 
 .partners-heading h1{
-  font-size: 50px;
-  color: #000000;
-  margin-bottom: 25px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+color: #000000;
+margin-bottom: 25px;
+position: relative;
+font-family: 'Montserrat', sans-serif;
 
 }
 
 .partners-heading h1::after{
-  content:"";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  display: block;
-  margin:0 auto;
-  background-color: #fd0202;
+content:"";
+position: absolute;
+width: 100%;
+height: 4px;
+display: block;
+margin:0 auto;
+background-color: #fd0202;
 }
 
 .partners-heading p{
-  font-size: 18px;
-  color: #000000;
-  margin-bottom: 15px;
+font-size: 18px;
+color: #000000;
+margin-bottom: 15px;
 }
 
 .partners-container{
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  
+display: flex;
+flex-flow: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+
+padding: 0;
+margin: 0;
+list-style: none;
+
 }
 
 .partners-item {
-  width: 200px;
+width: 200px;
 }
 
 .partners-item img {
-  width: 100%;
-  margin-bottom: 10px;
+width: 100%;
+margin-bottom: 10px;
 }
 
 
 .signup-heading{
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px auto;
+width: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+margin: 20px auto;
 }
 
 .signup-heading h1{
-  font-size: 50px;
-  color: #000000;
-  margin-bottom: 25px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+color: #000000;
+margin-bottom: 25px;
+position: relative;
+font-family: 'Montserrat', sans-serif;
 
 }
 
 .signup-heading h1::after{
-  content:"";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  display: block;
-  margin:0 auto;
-  background-color: #fd0202;
+content:"";
+position: absolute;
+width: 100%;
+height: 4px;
+display: block;
+margin:0 auto;
+background-color: #fd0202;
 }
 
 .signup-heading p{
-  font-size: 18px;
-  color: #000000;
-  margin-bottom: 15px;
+font-size: 18px;
+color: #000000;
+margin-bottom: 15px;
 }
 
 
@@ -582,49 +582,52 @@ body {
 
 form {
   margin-top: 20px !important;
-  margin-bottom: 20px !important;
-  margin: auto;
+  margin-bottom: 80px !important;
   background-color: #fff;
-  width:50%;
+  width: 50%;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {
-  display: block;
-  margin-bottom: 8px;
+display: block;
+margin-bottom: 8px;
 }
 
 input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+width: 100%;
+padding: 10px;
+margin-bottom: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
 }
 
- form button {
+form button {
   background-color: #fd0202;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
- }
+  display: block; /* Ensure the button is a block-level element */
+  margin: 0 auto;
+}
 
- @media screen and (max-width: 768px) {
-  form {
-    width: 80%;
-  }
+@media screen and (max-width: 768px) {
+form {
+  width: 80%;
+}
 }
 
 
-  footer{
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
 }
