@@ -425,6 +425,10 @@ margin: 0;
 list-style: none;
 }
 
+.catalogue-item{
+  display: block;
+}
+
 .card {
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 width: 300px;
@@ -473,10 +477,18 @@ font-size: 18px;
 opacity: 0.7;
 }
 
+@media (min-width: 768px) {
+  #mobile-specific{
+    display: none; /* Hide on desktop sizes */
+  }
+}
+
+
 @media screen and (max-width: 768px) {
 .catalogue-container{
   flex-flow: column;
 }
+
 
 .card{
   margin-top: 40px;
