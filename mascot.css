@@ -1,4 +1,4 @@
-#mascotContainer{
+#mascot-container{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -8,16 +8,16 @@
     height: 23%;
     z-index: 2;
     animation: 
-        spawn 5s ease-out,
+        spawn 10s ease-out,
         hover 3s ease-out 5.5s infinite;
 }
 
 #mascot{
     height: 70%;
-    animation: flip 10s ease-out 7s infinite;
+    animation: flip 7s ease-out 7s infinite;
 }
 
-#mascotMessage{
+#mascot-message{
     opacity: 0%;
     background-color: #fd0202;
     color: #ffffff;
@@ -25,7 +25,7 @@
     border-radius: 5px;
 }
 
-#mascotContainer:hover #mascotMessage{
+#mascot-container:hover #mascot-message{
     opacity: 100%;
 }
 
@@ -55,3 +55,9 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    #mascot-container{
+        position: fixed;
+        height: 15%;
+    }
+}
