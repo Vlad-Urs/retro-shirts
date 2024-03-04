@@ -1,0 +1,57 @@
+#mascotContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2%;
+    left: 0%;
+    height: 23%;
+    z-index: 2;
+    animation: 
+        spawn 5s ease-out,
+        hover 3s ease-out 5.5s infinite;
+}
+
+#mascot{
+    height: 70%;
+    animation: flip 10s ease-out 7s infinite;
+}
+
+#mascotMessage{
+    opacity: 0%;
+    background-color: #fd0202;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#mascotContainer:hover #mascotMessage{
+    opacity: 100%;
+}
+
+@keyframes spawn{
+    0%{
+        opacity: 0%;
+    }
+    85%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes flip {
+    90%{
+        rotate: y 0deg;
+    } 
+
+    95%{
+        rotate: y 180deg;
+    }
+
+    100%{
+        rotate: y 360deg;
+    }
+}
+
