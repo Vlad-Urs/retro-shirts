@@ -261,23 +261,8 @@ nav a:hover {
 
 /*about section------------------------------------------------------------------*/
 
-.about-heading{
-width: 90%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-text-align: center;
-margin: 20px auto;
-}
-
 .about-heading h1{
-font-size: 50px;
-color: #000000;
-margin-bottom: 25px;
-position: relative;
 font-family: 'Montserrat', sans-serif;
-
 }
 
 .about-heading h1::after{
@@ -291,8 +276,6 @@ background-color: #fd0202;
 }
 
 .about-heading p{
-font-size: 18px;
-color: #000000;
 margin-bottom: 35px;
 }
 
@@ -346,9 +329,6 @@ text-align: justify;
 
 /*media query for mobile*/
 @media screen and (max-width: 768px) {
-.heading{
-  padding: 0px 20px;
-}
 
 .heading h1{
   font-size: 36px;
